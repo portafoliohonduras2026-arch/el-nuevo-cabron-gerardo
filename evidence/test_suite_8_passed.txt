@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform android -- Python 3.14.10, pytest-9.1.1, pluggy-1.6.0 -- /data/data/com.termux/files/usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /data/data/com.termux/files/home/el-nuevo-cabron-gerardo
+configfile: pytest.ini
+testpaths: tests
+plugins: asyncio-1.4.0, anyio-4.15.1, respx-0.23.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 8 items
+
+tests/test_engine.py::test_engine_isolates_crash_and_continues PASSED    [ 12%]
+tests/test_exchange_ccxt.py::test_exchange_connector_ticker PASSED       [ 25%]
+tests/test_exchange_mock.py::TestExchangeNetworkFailure::test_exchange_retry_and_timeout PASSED [ 37%]
+tests/test_notifier.py::TestTelegramNotifier::test_notifier_disabled_without_credentials PASSED [ 50%]
+tests/test_notifier.py::TestTelegramNotifier::test_notifier_handles_network_failure_gracefully PASSED [ 62%]
+tests/test_safety_gate.py::test_safety_gate_validation PASSED            [ 75%]
+tests/test_strategy.py::TestTradingStrategy::test_strategy_buy_approved PASSED [ 87%]
+tests/test_strategy.py::TestTradingStrategy::test_strategy_rejected_by_safety_gate PASSED [100%]
+
+============================== 8 passed in 1.43s ===============================
