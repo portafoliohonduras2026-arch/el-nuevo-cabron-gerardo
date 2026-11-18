@@ -7,3 +7,4 @@ logs/*
 .env
 *.sqlite3
 *.db
+.pytest_cache/
